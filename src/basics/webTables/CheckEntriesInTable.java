@@ -4,11 +4,12 @@ package basics.webTables;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 
 
 public class CheckEntriesInTable {
-	
+	@Test
 	static int getTotalEntryCount() {
 		WebDriver driver = PredefinedActions.start();
 		System.out.println("Step 2.check total Entry count in table - Expected :57");
