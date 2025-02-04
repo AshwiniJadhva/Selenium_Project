@@ -39,7 +39,7 @@ public class SelectClassOperations {
 		driver.findElement(By.xpath("//a[@id='basicelements']")).click();
 		
 	}
-	//@AfterMethod
+	@AfterMethod
 	void tearDown() {
 		driver.close();
 	}
