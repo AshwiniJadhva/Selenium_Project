@@ -1,5 +1,7 @@
 package basics.testCase.testCase15.dataProvider;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import utility.ExcelOperations;
 
 public class TestCase16 {
 	
@@ -38,25 +42,11 @@ public class TestCase16 {
 	}
 	
 	@DataProvider(name = "loginDataProvider")
-	Object[][] logindata() {
-		Object[][] data = new Object[4][3];
-		data[0][0] = "ashwini";
-		data[0][1] = "ashwini123";
-		data[0][2] = "Success!";
+	Object[][] logindata() throws IOException {
+		return ExcelOperations.readExcel("akLoginData.xlsx","data");
 		
-		data[1][0] = "ajinkya";
-		data[1][1] = "ajiknya23";
-		data[1][2] = "Success!";
 		
-		data[2][0] = "agastya";
-		data[2][1] = "agastya123";
-		data[2][2] = "Success!";
 		
-		data[3][0] = "bal";
-		data[3][1] = "bal123";
-		data[3][2] = "Failed! please enter strong password";
-		
-		return data;
 				
 	}
 	
