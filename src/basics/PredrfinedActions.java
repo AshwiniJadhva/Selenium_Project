@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PredrfinedActions {
 	
-	private  static WebDriver driver ;
+	protected static WebDriver driver ;
 	public static  WebDriver start() {
 		System.out.println("step 1. Launch a chrome");
 		System.setProperty("webdriver.driver.chromedriver","chromedriver.exe");
